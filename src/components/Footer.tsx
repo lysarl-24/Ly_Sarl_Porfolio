@@ -2,10 +2,10 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: 'LinkedIn', href: '#' },
-    { name: 'GitHub', href: '#' },
-    { name: 'Twitter', href: '#' },
-    { name: 'Email', href: 'mailto:contact@darasok.dev' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/ly-sarl-03a28039a' },
+    { name: 'GitHub', href: 'https://github.com/lysarl-24' },
+    // { name: 'Twitter', href: '#' },
+    { name: 'Email', href: 'https://mail.google.com/mail/u/0/#inbox' },
   ];
 
   return (
@@ -13,10 +13,10 @@ export default function Footer() {
       <div className="flex flex-col md:flex-row justify-between items-center px-12 max-w-screen-2xl mx-auto">
         <div className="mb-8 md:mb-0">
           <div className="text-lg font-black text-on-surface headline-font uppercase mb-2 tracking-tighter">
-            ARCHITECT<span className="text-primary">.DEV</span>
+            LySarl<span className="text-primary">.DEV</span>
           </div>
           <p className="text-xs tracking-widest text-on-surface-variant font-bold uppercase">
-            © {currentYear} THE KINETIC ARCHITECT. ALL RIGHTS RESERVED.
+            © {currentYear} BACKEND DEVELOPER. ALL RIGHTS RESERVED.
           </p>
         </div>
         

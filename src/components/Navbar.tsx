@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import cvFileUrl from '../cv/Ly Sarl.pdf?url';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,10 +22,10 @@ export default function Navbar() {
   ];
 
   return (
-    <nav 
+    <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-surface/70 backdrop-blur-xl border-b border-outline-variant py-4 shadow-2xl shadow-black/40' 
+        isScrolled
+          ? 'bg-surface/70 backdrop-blur-xl border-b border-outline-variant py-4 shadow-2xl shadow-black/40'
           : 'bg-transparent py-6 border-b border-transparent'
       }`}
     >
@@ -33,7 +33,7 @@ export default function Navbar() {
         <div className="text-xl font-bold tracking-tighter text-on-surface headline-font uppercase">
           My<span className="text-primary">Portfolio</span>
         </div>
-        
+
         <div className="hidden md:flex items-center gap-8 font-headline font-medium tracking-tight">
           {navLinks.map((link) => (
             <a
@@ -48,8 +48,9 @@ export default function Navbar() {
         </div>
 
         <div>
-          <a 
-            href="#" 
+          <a
+            href={cvFileUrl}
+            download="Ly Sarl CV.pdf"
             className="primary-gradient text-on-primary px-5 py-2.5 rounded-lg text-sm font-bold active:scale-95 transition-transform inline-block"
           >
             Download CV

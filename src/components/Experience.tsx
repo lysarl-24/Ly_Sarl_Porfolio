@@ -3,13 +3,20 @@ import { CheckCircle2 } from 'lucide-react';
 
 const experiences = [
   {
-    title: 'Intern Web Developer',
-    company: 'ABC Company',
-    period: 'JAN 2025 - PRESENT',
-    description: 'Contributing to the development of internal tools and client-facing web applications. Collaborating with cross-functional teams to implement responsive designs and optimize backend performance using Laravel.',
+    title: 'Backend Developer Student',
+    company: 'Academic & Personal Project',
+    period: '2025 - PRESENT',
+    description: [
+      'I have been studying web development for over 2 years with a strong focus on backend development and database systems. My experience mainly comes from building school and personal projects, where I work with modern backend technologies and collaborative development tools.',
+      'My major project, VC1, was developed using Laravel, React.js, and MySQL, with API testing through Postman and project collaboration using Jira, Git, and GitHub.'
+    ],
     achievements: [
-      'Assisting in database schema design and optimization for high-traffic apps.',
-      'Implementing UI components using React and Tailwind CSS.'
+      'Developing backend systems and RESTful APIs using Laravel.',
+      'Designing and managing relational databases with MySQL.',
+      'Building frontend interfaces with React.js integrated with backend services.',
+      'Testing APIs and backend functionality using Postman.',
+      'Managing version control and team collaboration with Git & GitHub.',
+      'Using Jira for task management and project workflow organization.'
     ]
   }
 ];
@@ -23,13 +30,13 @@ export default function Experience() {
           <br />Professional Journey
         </span>
         <h2 className="headline-font text-4xl md:text-6xl font-bold mb-16 tracking-tight">
-           <span className="text-primary">Backend Developer & Database Enthusiast
-Personal & Academic Projects</span>
+          <span className="text-primary">Backend Developer & Database Enthusiast
+            Personal & Academic Projects</span>
         </h2>
 
         <div className="space-y-12">
           {experiences.map((exp, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -39,7 +46,7 @@ Personal & Academic Projects</span>
             >
               {/* Timeline dot */}
               <div className="absolute left-[-9px] top-0 w-4 h-4 bg-primary rounded-full group-hover:scale-150 transition-transform duration-300 shadow-[0_0_10px_rgba(129,236,255,1)]" />
-              
+
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                 <div>
                   <h3 className="headline-font text-2xl font-bold">{exp.title}</h3>
@@ -49,11 +56,11 @@ Personal & Academic Projects</span>
                   {exp.period}
                 </span>
               </div>
-              
+
               <p className="text-on-surface/70 leading-relaxed mb-6 text-lg">
                 {exp.description}
               </p>
-              
+
               <ul className="space-y-3">
                 {exp.achievements.map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-sm text-on-surface-variant">

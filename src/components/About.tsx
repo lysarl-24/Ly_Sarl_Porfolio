@@ -1,5 +1,6 @@
 import { GraduationCap } from 'lucide-react';
 import { motion } from 'motion/react';
+import profileImage from '../images/photo.png';
 
 export default function About() {
   return (
@@ -14,8 +15,8 @@ export default function About() {
         >
           <div className="absolute -inset-4 bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
           <img 
-            src="https://i.pinimg.com/736x/40/c7/2a/40c72ad8e064827ed303e5c20508372c.jpg" 
-            alt="Dara Sok" 
+            src={profileImage} 
+            alt="Ly Sarl" 
             className="relative rounded-xl w-full aspect-[4/5] object-cover filter grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl"
           />
         </motion.div>
