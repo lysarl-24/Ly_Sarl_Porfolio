@@ -28,7 +28,7 @@ export default function Hero() {
           </h1>
           
           <h2 className="headline-font text-2xl md:text-4xl font-light text-on-surface-variant mb-8">
-            Backend Web Developer
+            Web Developer
           </h2>
           
           <p className="text-lg md:text-xl text-on-surface/80 max-w-2xl mb-12 leading-relaxed">
@@ -60,17 +60,37 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.15, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="relative mx-auto w-full max-w-[320px] lg:max-w-[360px]"
+          className="group relative mx-auto w-full max-w-[320px] lg:max-w-[360px]"
         >
-          <div className="relative aspect-square [clip-path:polygon(25%_6.7%,75%_6.7%,100%_50%,75%_93.3%,25%_93.3%,0%_50%)] bg-primary p-[6px] shadow-[0_0_35px_rgba(129,236,255,0.35)]">
-            <div className="h-full w-full [clip-path:polygon(25%_6.7%,75%_6.7%,100%_50%,75%_93.3%,25%_93.3%,0%_50%)] bg-surface-container-low p-[8px]">
-              <img
+          <motion.div
+            animate={{
+              y: [0, -10, 0],
+              rotate: [0, -1, 0, 1, 0],
+              boxShadow: [
+                '0 0 35px rgba(129,236,255,0.30)',
+                '0 0 55px rgba(129,236,255,0.50)',
+                '0 0 35px rgba(129,236,255,0.30)',
+              ],
+            }}
+            transition={{
+              duration: 7,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+            whileHover={{ scale: 1.03 }}
+            className="relative aspect-square [clip-path:polygon(25%_6.7%,75%_6.7%,100%_50%,75%_93.3%,25%_93.3%,0%_50%)] bg-primary p-[6px]"
+          >
+            <div className="h-full w-full overflow-hidden [clip-path:polygon(25%_6.7%,75%_6.7%,100%_50%,75%_93.3%,25%_93.3%,0%_50%)] bg-surface-container-low p-[8px]">
+              <motion.img
                 src={profileImage}
                 alt="Ly Sarl portrait"
+                animate={{ scale: [1, 1.04, 1] }}
+                transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+                whileHover={{ scale: 1.08 }}
                 className="h-full w-full object-cover [clip-path:polygon(25%_6.7%,75%_6.7%,100%_50%,75%_93.3%,25%_93.3%,0%_50%)]"
               />
             </div>
-          </div>
+          </motion.div>
 
           <div className="pointer-events-none absolute inset-0">
             <div className="absolute left-0 top-8 h-12 w-12 border-l-4 border-t-4 border-primary rounded-tl-2xl" />

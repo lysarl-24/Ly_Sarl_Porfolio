@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import cvFileUrl from '../cv/Ly Sarl.pdf?url';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,7 +30,7 @@ export default function Navbar() {
     >
       <div className="flex justify-between items-center px-8 w-full max-w-screen-2xl mx-auto">
         <div className="text-xl font-bold tracking-tighter text-on-surface headline-font uppercase">
-          My<span className="text-primary">Portfolio</span>
+          ly<span className="text-primary">.dev</span>
         </div>
 
         <div className="hidden md:flex items-center gap-8 font-headline font-medium tracking-tight">
@@ -49,8 +48,7 @@ export default function Navbar() {
 
         <div>
           <a
-            href={cvFileUrl}
-            download="Ly Sarl CV.pdf"
+            href="#"
             className="primary-gradient text-on-primary px-5 py-2.5 rounded-lg text-sm font-bold active:scale-95 transition-transform inline-block"
           >
             Download CV

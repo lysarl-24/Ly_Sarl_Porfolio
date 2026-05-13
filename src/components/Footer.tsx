@@ -13,10 +13,10 @@ export default function Footer() {
       <div className="flex flex-col md:flex-row justify-between items-center px-12 max-w-screen-2xl mx-auto">
         <div className="mb-8 md:mb-0">
           <div className="text-lg font-black text-on-surface headline-font uppercase mb-2 tracking-tighter">
-            LySarl<span className="text-primary">.DEV</span>
+            Ly<span className="text-primary">.DEV</span>
           </div>
           <p className="text-xs tracking-widest text-on-surface-variant font-bold uppercase">
-            © {currentYear} BACKEND DEVELOPER. ALL RIGHTS RESERVED.
+            © {currentYear} WEB DEVELOPER. ALL RIGHTS RESERVED.
           </p>
         </div>
         
