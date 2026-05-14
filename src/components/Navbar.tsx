@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const cvDownloadPath = `${import.meta.env.BASE_URL}cv/Ly Sarl.pdf`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,7 +49,8 @@ export default function Navbar() {
 
         <div>
           <a
-            href="#"
+            href={cvDownloadPath}
+            download="Ly-Sarl-CV.pdf"
             className="primary-gradient text-on-primary px-5 py-2.5 rounded-lg text-sm font-bold active:scale-95 transition-transform inline-block"
           >
             Download CV

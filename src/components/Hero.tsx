@@ -28,7 +28,7 @@ export default function Hero() {
           </h1>
           
           <h2 className="headline-font text-2xl md:text-4xl font-light text-on-surface-variant mb-8">
-            Web Developer
+            Backend Web Developer
           </h2>
           
           <p className="text-lg md:text-xl text-on-surface/80 max-w-2xl mb-12 leading-relaxed">
@@ -53,6 +53,7 @@ export default function Hero() {
             >
               Contact Me
             </motion.a>
+
           </div>
         </div>
 
